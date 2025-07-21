@@ -1,11 +1,3 @@
-.bodyContainerNew {
-    position: relative;
-    z-index: 2;
-    min-height: 700px;
-    padding: 0 60px;
-    overflow: visible;  
-}
-
 .cardsContainerNew {
     display: flex;
     gap: 10px;
@@ -16,14 +8,22 @@
 
     
     overflow: visible;
-    overflow-y: visible;
-    overflow-x:visible;
+    overflow-y: visible;     /* works well when overflow-x is commented. Gets set to scroll when overflow-x is set to scroll, even though explicitly mentioned as visible */
 
-    /* ↑↑↑↑↑ uncomment this part above to switch to scroll instead of button scroll */
+    /* overflow-x: scroll; */
+
+/* ↑↑↑↑↑ uncomment this part above to switch to scroll instead of button scroll */
 }
 
-.moveLeft {transform: translateX(-100%); z-index: 15;} /* class that moves the cardscontainerdiv to the right */
+.moveLeft {transform: translateX(-100%); z-index: 15;} /* class that moves the cardscontainerdiv to the right. use when scroll is removed*/
 
+.bodyContainerNew {
+    position: relative;
+    z-index: 2;
+    min-height: 700px;
+    padding: 0 60px;
+    overflow: visible;  
+}
 
 
 
