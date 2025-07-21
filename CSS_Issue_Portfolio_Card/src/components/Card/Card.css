@@ -1,0 +1,96 @@
+.cardContainer {
+    width: 256px;
+    height: 144px;
+    background-color: rgb(20, 20, 20);
+    transition: transform 0.35s ease;
+    flex: 0 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.cardContainer > img {
+    width: 100%;
+    aspect-ratio: 1920/1080;
+    object-fit:cover;
+}
+
+.hoverContainer:hover {
+    transform: scale(1.4);
+    transform-origin: 50% 100%;
+    height: 288px;
+    position: relative;
+    z-index: 20;
+    box-shadow: 0px 4px 15px rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+
+.cardText{
+    display: none;
+    padding: 10px;
+}
+.hoverContainer:hover .cardText {
+    display: block;
+}
+
+
+/* ▼ Ignore media query styles ▼ */
+
+
+@media (max-width: 768px) {
+    .cardContainer{
+        width: 20vw;
+    }
+    .cardText{
+        font-size: smaller;
+        position: relative;
+    }
+    .cardText div {
+        height: 20px;
+    }
+    .hoverContainer:hover {
+        height: 116px;
+        transform: scale(1.2);
+        transform-origin: 50% 0%;
+        z-index: 1000;
+    }
+    #hoverDescription {
+        display: none;
+    }
+}
+@media (max-width: 600px) {
+    .cardContainer{
+        width: 25vw;
+    }
+}
+@media (max-width: 512px) {
+    .cardContainer{
+        width: 30vw;
+    }
+    .hoverContainer:hover{
+        height: 32px;
+    }
+    .cardText div{
+        position: absolute;
+        left: 0;
+        top: -40px;
+        width: 100%;
+        padding: 0px 10px;
+        box-sizing: border-box;
+    }
+}
+@media (max-width: 412px) {
+    .cardContainer{
+        width: 45vw;
+        transition: all 0.2x ease;
+    }
+    .cardinfobtn {
+        transform: scale(1.5);
+        border: 0;
+    }
+    .hoverContainer:hover {
+        transform: scale(1.2);
+        transform-origin: 50% 50%;
+        z-index: 1000;
+    }
+}
